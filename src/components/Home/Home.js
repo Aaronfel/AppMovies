@@ -4,6 +4,7 @@ import MostrarPelis from '../MostrarPelis'
 import './Home.css'
 
 const Home = () => {
+    
     const { arrayMovies, getMovies } = useContext(Context)
 
 

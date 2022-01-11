@@ -3,11 +3,11 @@ import './MostrarPelis.css'
 
 const MostrarPelis = ({peliculas}) => {
     return (
-        <>
-        {peliculas.map(pelicula => (
-            <Pelicula {...pelicula}/>
-        ))}
-        </>
+        <div className='d-flex flex-wrap justify-content-evenly'>
+            {peliculas.map((pelicula, index) => (
+                <Pelicula key={index} {...pelicula}/>
+            ))}
+        </div>
     );
 }
 
