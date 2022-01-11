@@ -12,11 +12,6 @@ const Home = () => {
         getMovies()
     }, [])
 
-    useEffect(() => {
-        console.log(arrayMovies);
-    }, [arrayMovies])
-
-
     return (
         <>
             <MostrarPelis peliculas={arrayMovies} />

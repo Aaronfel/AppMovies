@@ -1,20 +1,12 @@
 import './Pelicula.css'
 
 import { Link } from 'react-router-dom'
-import { useContext, useEffect, useState } from 'react'
+import { useContext } from 'react'
 import { Context } from '../../store/appContext'
-import { useParams } from 'react-router-dom'
 
 const Pelicula = ({title, backdrop_path, id}) => {
-
-    const {idPeli} = useParams()
-    
     
     const {addFavoriteMovie, favoritesMovies, removeFavoriteMovie} = useContext(Context)
-    
-    useEffect(() => {
-        console.log(idPeli)
-    },[idPeli])
 
     const isFavorite = favoritesMovies.some(idF => idF === id)
 
